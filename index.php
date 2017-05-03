@@ -12,7 +12,7 @@
 
 <div class="row">
 	<div class="col-xs-6 col-sm-3 col-md-2">
-		<a href="clientes/add.php" class="btn btn-primary">
+		<a href="clientes/adicionar_cliente.php" class="btn btn-primary">
 			<div class="row">
 				<div class="col-xs-12 text-center">
 					<i class="fa fa-plus fa-5x"></i>
