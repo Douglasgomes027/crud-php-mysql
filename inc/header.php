@@ -37,8 +37,8 @@
                     Clientes <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="<?php echo BASEURL; ?>customers">Gerenciar Clientes</a></li>
-                    <li><a href="<?php echo BASEURL; ?>customers/add.php">Novo Cliente</a></li>
+                    <li><a href="<?php echo BASEURL; ?>clientes">Gerenciar Clientes</a></li>
+                    <li><a href="<?php echo BASEURL; ?>clientes/add.php">Novo Cliente</a></li>
                 </ul>
             </li>
           </ul>
