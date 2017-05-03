@@ -12,68 +12,54 @@
   <hr />
   <div class="row">
     <div class="form-group col-md-7">
-      <label for="name">Nome / Razão Social</label>
-      <input type="text" class="form-control" name="cliente['nome']">
+      <input type="text" name="cliente['nome']" placeholder="Nome" class="form-control"">
     </div>
 
     <div class="form-group col-md-3">
-      <label for="campo2">CNPJ / CPF</label>
-      <input type="text" class="form-control" name="cliente['cpf_cnpj']">
+      <input type="text" name="cliente['cpf_cnpj']" placeholder="Cpf/Cnpj" class="form-control"">
     </div>
 
     <div class="form-group col-md-2">
-      <label for="campo3">Data de Nascimento</label>
-      <input type="text" class="form-control" name="cliente['nascimento']">
+      <input type="text" name="cliente['nascimento']" placeholder="Data de Nascimento" class="form-control"">
     </div>
   </div>
   
   <div class="row">
     <div class="form-group col-md-5">
-      <label for="campo1">Endereço</label>
-      <input type="text" class="form-control" name="cliente['endereco']">
+      <input type="text" name="cliente['endereco']" placeholder="Endereço" class="form-control"">
     </div>
 
     <div class="form-group col-md-3">
-      <label for="campo2">Bairro</label>
-      <input type="text" class="form-control" name="cliente['bairro']">
+      <input type="text" name="cliente['bairro']" placeholder="Bairro" class="form-control"">
     </div>
     
     <div class="form-group col-md-2">
-      <label for="campo3">CEP</label>
-      <input type="text" class="form-control" name="cliente['cep']">
+      <input type="text" name="cliente['cep']" placeholder="Cep" class="form-control"">
     </div>
     
     <div class="form-group col-md-2">
-      <label for="campo3">Data de Cadastro</label>
-      <input type="text" class="form-control" name="cliente['data_criacao']" disabled>
+      <input type="text" iname="cliente['data_criacao']" placeholder="Data Cadastro" class="form-control" disabled>
     </div>
   </div>
   
   <div class="row">
     <div class="form-group col-md-3">
-      <label for="campo1">Município</label>
-      <input type="text" class="form-control" name="cliente['cidade']">
+      <input type="text" name="cliente['cidade']" placeholder="Cidade" class="form-control"">
     </div>
     
     <div class="form-group col-md-2">
-      <label for="campo2">Telefone</label>
-      <input type="text" class="form-control" name="cliente['telefone']">
+      <input type="text" name="cliente['estado']" placeholder="Estado" class="form-control"">
     </div>
     
     <div class="form-group col-md-2">
-      <label for="campo3">Celular</label>
-      <input type="text" class="form-control" name="cliente['celular']">
+      <input type="text" name="cliente['telefone']" placeholder="Telefone" class="form-control"">
     </div>
     
-    <div class="form-group col-md-1">
-      <label for="campo3">UF</label>
-      <input type="text" class="form-control" name="cliente['estado']">
+    <div class="form-group col-md-2">
+      <input type="text" name="cliente['celular']" placeholder="Celular" class="form-control"">
     </div>  
     
-    <div class="form-group col-md-2">
-      <label for="campo3">UF</label>
-      <input type="text" class="form-control">
-    </div>
+    
   </div>
   
   <div id="actions" class="row">

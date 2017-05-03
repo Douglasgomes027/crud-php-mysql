@@ -23,7 +23,7 @@
 	    $today = 
 	      date_create('now', new DateTimeZone('America/Fortaleza'));
 	    $cliente = $_POST['cliente'];
-	    $cliente['data_atualizacao'] = $customer['data_criacao'] = $today->format("Y-m-d H:i:s");
+	    $cliente['data_atualizacao'] = $cliente['data_criacao'] = $today->format("Y-m-d H:i:s");
 	    
 	    save('clientes', $cliente);
 	    header('location: index.php');

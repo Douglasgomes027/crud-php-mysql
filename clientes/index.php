@@ -32,10 +32,14 @@
 <thead>
 	<tr>
 		<th>ID</th>
-		<th width="30%">Nome</th>
+		<th width="15%">Nome</th>
 		<th>CPF/CNPJ</th>
+		<th>Cidade</th>
+		<th>Estado</th>
 		<th>Telefone</th>
-		<th>Cidade em</th>
+		<th>Celular</th>
+		<th>Data Criacao</th>
+		<th>Data Atualizacao</th>
 		<th>Opções</th>
 	</tr>
 </thead>
@@ -46,8 +50,12 @@
 		<td><?php echo $cliente['id']; ?></td>
 		<td><?php echo $cliente['nome']; ?></td>
 		<td><?php echo $cliente['cpf_cnpj']; ?></td>
-		<td><?php echo $cliente['telefone']; ?></td>
 		<td><?php echo $cliente['cidade']; ?></td>
+		<td><?php echo $cliente['estado']; ?></td>
+		<td><?php echo $cliente['telefone']; ?></td>
+		<td><?php echo $cliente['celular']; ?></td>
+		<td><?php echo $cliente['data_criacao']; ?></td>
+		<td><?php echo $cliente['data_atualizacao']; ?></td>
 		<td class="actions text-right">
 			<a href="view.php?id=<?php echo $cliente['id']; ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Visualizar</a>
 			<a href="edit.php?id=<?php echo $cliente['id']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
