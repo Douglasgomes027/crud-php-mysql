@@ -71,34 +71,36 @@ function find_all( $table ) {
 /**
 *  Insere um registro no BD
 */
-function save($table = null, $data = null) {
+function save() {
   $database = open_database();
-  $columns = null;
-  $values = null;
 
-  //print_r($data);
-  foreach ($data as $key => $value) {
-    $columns .= trim($key, "'") . ",";
-    $values .= "'$value',";
-  }
+  $today = date_create('now', new DateTimeZone('America/Fortaleza'));
+  
+  $nome = $_POST['nome'];
+  $cpf_cnpj = $_POST['cpf_cnpj'];
+  $nascimento = $_POST['nascimento'];
+  $endereco = $_POST['endereco'];
+  $bairro = $_POST['bairro'];
+  $cep = $_POST['cep'];
+  $data_criacao = $today->format("Y-m-d H:i:s");
+  $data_atualizacao = $data_criacao;
+  $cidade = $_POST['cidade'];
+  $estado = $_POST['estado'];
+  $telefone = $_POST['telefone'];
+  $celular = $_POST['celular'];
 
-  // remove a ultima virgula
-  $columns = rtrim($columns, ',');
-  $values = rtrim($values, ',');
+    
   
-  $sql = "INSERT INTO " . $table . " ($columns) " . " VALUES " . "($values);";
+  $sql = "INSERT INTO clientes(nome,cpf_cnpj,nascimento,endereco,bairro,cep,cidade,estado,telefone,celular,data_criacao,data_atualizacao) VALUES('$nome','$cpf_cnpj','$nascimento','$endereco','$bairro','$cep','$cidade','$estado','$telefone','$celular','$data_criacao','$data_atualizacao');";
 
-  try {
-  	print_r($values);
-    $database->query($sql);
-    $_SESSION['message'] = 'Registro cadastrado com sucesso.';
-    $_SESSION['type'] = 'success';
   
-  } catch (Exception $e) { 
+
+  if ($database->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $database->error;
+}
   
-    $_SESSION['message'] = 'Nao foi possivel realizar a operacao.';
-    $_SESSION['type'] = 'danger';
-  } 
   close_database($database);
 }
 

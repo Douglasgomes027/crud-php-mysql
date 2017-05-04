@@ -18,15 +18,12 @@
 	 *  Cadastro de Clientes
 	 */
 	function adicionar_cliente() {
-	  if (!empty($_POST['cliente'])) {
+	  if (!empty($_POST['nome'] && $_POST['cpf_cnpj'] && $_POST['nascimento'] && $_POST['endereco'])
+	  	&& $_POST['bairro'] && $_POST['nascimento'] && $_POST['cep'] && $_POST['cidade'] && $_POST['telefone'] && $_POST['celular']) {	    
 	    
-	    $today = 
-	      date_create('now', new DateTimeZone('America/Fortaleza'));
-	    $cliente = $_POST['cliente'];
-	    $cliente['data_atualizacao'] = $cliente['data_criacao'] = $today->format("Y-m-d H:i:s");
+	    save();
 	    
-	    save('clientes', $cliente);
-	    header('location: index.php');
-	  }
-}
+	  }   
+	    
+	}
 ?>

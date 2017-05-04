@@ -12,51 +12,51 @@
   <hr />
   <div class="row">
     <div class="form-group col-md-7">
-      <input type="text" name="cliente['nome']" placeholder="Nome" class="form-control"">
+      <input type="text" name="nome" placeholder="Nome" class="form-control"">
     </div>
 
     <div class="form-group col-md-3">
-      <input type="text" name="cliente['cpf_cnpj']" placeholder="Cpf/Cnpj" class="form-control"">
+      <input type="text" name="cpf_cnpj" placeholder="Cpf/Cnpj" class="form-control"">
     </div>
 
     <div class="form-group col-md-2">
-      <input type="text" name="cliente['nascimento']" placeholder="Data de Nascimento" class="form-control"">
+      <input type="text" name="nascimento" placeholder="Data de Nascimento" class="form-control"">
     </div>
   </div>
   
   <div class="row">
     <div class="form-group col-md-5">
-      <input type="text" name="cliente['endereco']" placeholder="Endereço" class="form-control"">
+      <input type="text" name="endereco" placeholder="Endereço" class="form-control"">
     </div>
 
     <div class="form-group col-md-3">
-      <input type="text" name="cliente['bairro']" placeholder="Bairro" class="form-control"">
+      <input type="text" name="bairro" placeholder="Bairro" class="form-control"">
     </div>
     
     <div class="form-group col-md-2">
-      <input type="text" name="cliente['cep']" placeholder="Cep" class="form-control"">
+      <input type="text" name="cep" placeholder="Cep" class="form-control"">
     </div>
     
     <div class="form-group col-md-2">
-      <input type="text" iname="cliente['data_criacao']" placeholder="Data Cadastro" class="form-control" disabled>
+      <input type="text" iname="data_criacao" placeholder="Data Cadastro" class="form-control" disabled>
     </div>
   </div>
   
   <div class="row">
     <div class="form-group col-md-3">
-      <input type="text" name="cliente['cidade']" placeholder="Cidade" class="form-control"">
+      <input type="text" name="cidade" placeholder="Cidade" class="form-control"">
     </div>
     
     <div class="form-group col-md-2">
-      <input type="text" name="cliente['estado']" placeholder="Estado" class="form-control"">
+      <input type="text" name="estado" placeholder="Estado" class="form-control"">
     </div>
     
     <div class="form-group col-md-2">
-      <input type="text" name="cliente['telefone']" placeholder="Telefone" class="form-control"">
+      <input type="text" name="telefone" placeholder="Telefone" class="form-control"">
     </div>
     
     <div class="form-group col-md-2">
-      <input type="text" name="cliente['celular']" placeholder="Celular" class="form-control"">
+      <input type="text" name="celular" placeholder="Celular" class="form-control"">
     </div>  
     
     
