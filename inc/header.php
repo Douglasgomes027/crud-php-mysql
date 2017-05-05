@@ -7,6 +7,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+
     <link rel="stylesheet" href="<?php echo BASEURL; ?>css/bootstrap.min.css">
     <style>
         body {

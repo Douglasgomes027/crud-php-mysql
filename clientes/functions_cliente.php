@@ -26,4 +26,26 @@
 	  }   
 	    
 	}
+
+		/**
+	 *	Atualizacao/Edicao de Cliente
+	 */
+	function editar_cliente() {
+	   
+
+  	if (isset($_GET['id'])) {
+    		$id = $_GET['id'];
+    	if (isset($_POST['cliente'])) {
+      	$cliente = $_POST['cliente'];
+      	
+      	update('clientes', $id, $cliente);
+      	header('location: index.php');
+    		}else {
+      		global $cliente;
+      		$cliente = find('clientes', $id);
+    		} 
+  	} else {
+    	//header('location: index.php');
+  	}
+	}
 ?>

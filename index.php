@@ -3,9 +3,10 @@
 
 <?php include(HEADER_TEMPLATE); ?>
 <?php $db = open_database(); ?>
+<?php session_start(); ?>
 
 
-<h1>Dashboard</h1>
+<h1>SEJA BEM-VINDO <?php echo $_SESSION['usuario'] ?></h1>
 <hr />
 
 <?php if ($db) : ?>
