@@ -114,7 +114,7 @@ function save() {
 
     
   
-  $sql = "INSERT INTO clientes(nome,cpf_cnpj,nascimento,endereco,bairro,cep,cidade,estado,telefone,celular,data_criacao,data_atualizacao) VALUES('$nome','$cpf_cnpj','$nascimento','$endereco','$bairro','$cep','$cidade','$estado','$telefone','$celular','$data_criacao','$data_modificacao');";
+  $sql = "INSERT INTO clientes(nome,cpf_cnpj,nascimento,endereco,bairro,cep,cidade,estado,telefone,celular,data_criacao,data_modificacao) VALUES('$nome','$cpf_cnpj','$nascimento','$endereco','$bairro','$cep','$cidade','$estado','$telefone','$celular','$data_criacao','$data_modificacao');";
 
   
 
@@ -127,27 +127,29 @@ function save() {
   close_database($database);
 }
 
-function update($table = null, $id = 0, $data = null) {
+function update($table,$id,$cliente) {
+
   $database = open_database();
   
   $today = date_create('now', new DateTimeZone('America/Fortaleza'));
 
   
-  $nome = $data['nome'];
-  $cpf_cnpj = $data['cpf_cnpj'];
-  $nascimento = $data['nascimento'];
-  $endereco = $data['endereco'];
-  $bairro = $data['bairro'];
-  $cep = $data['cep'];
-  $data_criacao = $data['data_criacao'];
+  $nome = $cliente['nome'];
+  $cpf_cnpj = $cliente['cpf_cnpj'];
+  $nascimento = $cliente['nascimento'];
+  $endereco = $cliente['endereco'];
+  $bairro = $cliente['bairro'];
+  $cep = $cliente['cep'];
+  $data_criacao = $cliente['data_criacao'];
   $data_modificacao = $today->format("Y-m-d H:i:s");
-  $cidade = $data['cidade'];
-  $estado = $data['estado'];
-  $telefone = $data['telefone'];
-  $celular = $data['celular'];
+  $cidade = $cliente['cidade'];
+  $estado = $cliente['estado'];
+  $telefone = $cliente['telefone'];
+  $celular = $cliente['celular'];
 
-  $sql = "UPDATE clientes SET nome=$nome,cpf_cnpj=$cpf_cnpj,nascimento=$nascimento,endereco=$endereco,bairro=$bairro,cep=$cep,cidade=$cidade,estado=$estado,telefone=$telefone,celular=$celular,data_criacao=$data_criacao,data_atualizacao=$data_modificacao WHERE id=$id;";
+  $sql = "UPDATE clientes SET nome='$nome',cpf_cnpj='$cpf_cnpj',nascimento='$nascimento',endereco='$endereco',bairro='$bairro',cep='$cep',cidade='$cidade',estado='$estado',telefone='$telefone',celular='$celular',data_criacao='$data_criacao',data_modificacao='$data_modificacao' WHERE id=$id;";
 
+   $db->query($sql);
   
 
   	if ($database->query($sql) === TRUE) {

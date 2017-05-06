@@ -1,6 +1,6 @@
 
 <?php
-    require_once('functions.php');
+    require_once('functions_cliente.php');
     index();
 ?>
 
@@ -39,7 +39,7 @@
 		<th>Telefone</th>
 		<th>Celular</th>
 		<th>Data Criacao</th>
-		<th>Data Atualizacao</th>
+		<th>Data Modificação</th>
 		<th>Opções</th>
 	</tr>
 </thead>
@@ -55,7 +55,7 @@
 		<td><?php echo $cliente['telefone']; ?></td>
 		<td><?php echo $cliente['celular']; ?></td>
 		<td><?php echo $cliente['data_criacao']; ?></td>
-		<td><?php echo $cliente['data_atualizacao']; ?></td>
+		<td><?php echo $cliente['data_modificacao']; ?></td>
 		<td class="actions text-right">
 			<a href="view.php?id=<?php echo $cliente['id']; ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Visualizar</a>
 			<a href="editar_cliente.php?id=<?php echo $cliente['id']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>

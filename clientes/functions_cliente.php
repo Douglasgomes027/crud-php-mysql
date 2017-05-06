@@ -45,7 +45,7 @@
       		$cliente = find('clientes', $id);
     		} 
   	} else {
-    	//header('location: index.php');
+    	header('location: editar_cliente.php');
   	}
 	}
 ?>
